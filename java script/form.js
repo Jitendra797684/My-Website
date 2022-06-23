@@ -43,4 +43,26 @@ function validate(id) {
     }
 
   }
+  if (id == "password") {
+    var str = document.getElementById("password").value;
+    let strongPassword = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})')
+    let mediumPassword = new RegExp('((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{6,}))|((?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])(?=.{8,}))')
+    if (str == "") {
+      errorpass.style.backgroundColor = "";
+      errorpass.innerHTML = "<span style='color: red; font-size: 12px;'>" + "*Please Enter Password</span>"
+      return false;
+    } else {
+      if (strongPassword.test(str)) {
+        errorpass.style.backgroundColor = "green";
+        errorpass.innerHTML = "<span style='color: white; font-size: 12px; padding:10px;'>" + "Strong Password</span>"
+      } else if (mediumPassword.test(str)) {
+        errorpass.style.backgroundColor = 'blue';
+        errorpass.innerHTML = "<span style='color: white; font-size: 12px; padding:10px;'>" + "Medium Password</span>"
+      }
+      else {
+        errorpass.style.backgroundColor = 'red';
+        errorpass.innerHTML = "<span style='color: white; font-size: 12px; padding:10px;'>" + "Weak Password</span>"
+      }
+    }
+  }
 }

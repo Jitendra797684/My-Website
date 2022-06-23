@@ -91,13 +91,14 @@ img {
 /* Next & previous buttons */
 .prev,
 .next {
+ 
   cursor: pointer;
-  position: absolute;
+  position:initial;
   top: 40%;
   width: auto;
   padding: 16px;
   margin-top: -50px;
-  color: white;
+  color: #870987;
   font-weight: bold;
   font-size: 20px;
   border-radius: 0 3px 3px 0;
@@ -157,4 +158,7 @@ img {
 }
 .div1{
   height: 500px;
+}
+@media screen {
+  
 }
