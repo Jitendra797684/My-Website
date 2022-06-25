@@ -27,13 +27,13 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 
   // Start autoplaying automatically
-var autoplayInterval = setInterval(function() {
+// var autoplayInterval = setInterval(function() {
 
-// Get element via id and click next
-document.getElementById("next").click();
+// // Get element via id and click next
+// document.getElementById("next").click();
 
 
-}, 1000); // Do this every 1 second, increase this!
+// }, 1000); // Do this every 1 second, increase this!
 
 // Stop function added to button
 function stopAutoplay() {
