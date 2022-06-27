@@ -60,37 +60,39 @@
         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
           <div class="card" style="border-radius: 15px;">
             <div class="card-body p-5" style="background-color:#8028">
-              <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+              <h2 class="text-uppercase text-center mb-5">Contact Us </h2>
 
-              <form method="get" name="myform">
+              <form action="#" method="get"  name="myform">
 
                 <div class="form-outline mb-4">
-                  <input type="text" id="Name" class="form-control form-control-lg" onkeyup="validate(id)" />
+                  <input required  oninvalid="this.setCustomValidity('Enter Your  Name Here')"
+                  oninput="this.setCustomValidity('')" type="text" id="Name" class="form-control form-control-lg" onkeyup="validate(id)" />
                   <label class="form-label" for="form3Example1cg">Your Name</label>
                   <span id="error2"></span>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="text" id="email" class="form-control form-control-lg" onkeyup="validate(id)" />
+                  <input required oninvalid="this.setCustomValidity('Enter Your Email Here')"
+                  oninput="this.setCustomValidity('')" type="text" id="email" class="form-control form-control-lg" onkeyup="validate(id)" />
                   <label class="form-label" for="form3Example3cg">Your Email</label>
                   <span id="error4"></span>
                 </div>
 
                 <div class="form-outline mb-4">
-                  <input type="password" id="password" class="form-control form-control-lg" onkeyup="validate(id)"/>
-                  <label class="form-label" for="form3Example4cg">Password</label>
+                  <textarea required  oninvalid="this.setCustomValidity('Enter Your Massage Here')"
+                  oninput="this.setCustomValidity('')" placeholder="Text Here" id="Massage" class="form-control form-control-lg" onkeyup="validate(id)" ></textarea>
+                  <label class="form-label" for="form3Example4cg">Massage</label>
                   <span id="errorpass"></span>
                 </div>
 
                
 
                 <div class="d-flex justify-content-center">
-                  <button type="button"
-                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                  <button type="submit" id="btSubmit"   value="Submit"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Send</button>
                 </div>
 
-                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!"
-                    class="fw-bold text-body"><u>Login here</u></a></p>
+               
 
               </form>
 
