@@ -62,40 +62,35 @@
             <div class="card-body p-5" style="background-color:#8028">
               <h2 class="text-uppercase text-center mb-5">Contact Us </h2>
 
-              <form action="#" method="get"  name="myform">
+              <form action="#" method="post"  name="form" onsubmit="return checkForm(this)">
 
                 <div class="form-outline mb-4">
                   <input required  oninvalid="this.setCustomValidity('Enter Your  Name Here')"
-                  oninput="this.setCustomValidity('')" type="text" id="Name" class="form-control form-control-lg" onkeyup="validate(id)" />
+                  oninput="this.setCustomValidity('')" type="text" id="Name" name="inputfield" class="form-control form-control-lg" onkeyup="validate(id)" onsubmit="Submit()" />
                   <label class="form-label" for="form3Example1cg">Your Name</label>
-                  <span id="error2"></span>
+                  <span id="errorname"></span>
                 </div>
 
                 <div class="form-outline mb-4">
                   <input required oninvalid="this.setCustomValidity('Enter Your Email Here')"
-                  oninput="this.setCustomValidity('')" type="text" id="email" class="form-control form-control-lg" onkeyup="validate(id)" />
+                  oninput="this.setCustomValidity('')" type="text" id="Email" name="inputfield1" class="form-control form-control-lg" onkeyup="validate(id)" onsubmit="Submit()" />
                   <label class="form-label" for="form3Example3cg">Your Email</label>
-                  <span id="error4"></span>
+                  <span id="erroremail"></span>
                 </div>
 
                 <div class="form-outline mb-4">
                   <textarea required  oninvalid="this.setCustomValidity('Enter Your Massage Here')"
-                  oninput="this.setCustomValidity('')" placeholder="Text Here" id="Massage" class="form-control form-control-lg" onkeyup="validate(id)" ></textarea>
+                  oninput="this.setCustomValidity('')" placeholder="Text Here" id="Massage" name="inputfield2" class="form-control form-control-lg" onkeyup="validate(id)" onsubmit="Submit()" ></textarea>
                   <label class="form-label" for="form3Example4cg">Massage</label>
-                  <span id="errorpass"></span>
+                  <span id="errorMassage"></span>
                 </div>
 
-               
 
                 <div class="d-flex justify-content-center">
-                  <button type="submit" id="btSubmit"   value="Submit"
+                  <button type="submit" id="submit" onclick="validate()" 
                     class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Send</button>
                 </div>
-
-               
-
               </form>
-
             </div>
           </div>
         </div>
